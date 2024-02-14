@@ -1,0 +1,460 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0
+}
+
+:root {
+    --lerp-0: 1;
+    --lerp-1: 0.5787037;
+    --lerp-2: 0.2962963;
+    --lerp-3: 0.125;
+    --lerp-4: 0.037037;
+    --lerp-5: 0.0046296;
+    --lerp-6: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+}
+
+.hero {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: #0f0e17;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left {
+    /*background-color: #f25f4c;*/
+    width: 30%;
+
+}
+
+.left img {
+    width: 400px;
+    max-width: 400px;
+}
+
+.right {
+    width: 70%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/*BUTTON CONTAINER*/
+.crazybuttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+/*BUTTON*/
+.links {
+    background-image: url('../images/heroSection-pic1.png');
+    background-size: cover;
+    background-position: center;
+    height: 7rem;
+    width: 7rem;
+    border-radius: 50%;
+    margin-bottom: 1.5rem;
+}
+
+/*BUTTON*/
+.caseStudies {
+    background-image: url('../images/heroSection-pic2.png');
+    background-size: cover;
+    background-position: center;
+    height: 7rem;
+    width: 7rem;
+    border-radius: 50%;
+    margin-bottom: 1.5rem;
+}
+
+/*BUTTON*/
+.projects {
+    background-image: url('../images/heroSection-pic3.png');
+    background-size: cover;
+    background-position: center;
+    height: 7rem;
+    width: 7rem;
+    border-radius: 50%;
+    margin-bottom: 1.5rem;
+}
+
+/*BUTTON*/
+.resume {
+    background-image: url('../images/herSection-pic4.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 7rem;
+    width: 7rem;
+    border-radius: 50%;
+    margin-bottom: 1.5rem;
+}
+
+.aboutme {
+    padding: 2rem;
+    color: white
+}
+
+.aboutme p {
+    text-align: justify;
+    margin-top: 2rem;
+}
+
+
+.links,
+.caseStudies,
+.projects,
+.resume {
+    position: relative;
+    /* Needed for absolute positioning of the text */
+    cursor: pointer;
+    /* Optional: Changes the cursor on hover */
+    overflow: hidden;
+    /* Ensures the scale transform doesn't exceed the div boundaries */
+    transition: transform 0.3s ease;
+    /* Smooth transition for the scaling */
+}
+
+.overlay-text {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    transform: scale(0);
+    transition: transform 0.3s ease;
+    background: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent overlay */
+    opacity: 0;
+    /* Start fully transparent */
+    pointer-events: none;
+    /* Allows clicking through to the div below */
+}
+
+/* Hover effects */
+.links:hover,
+.caseStudies:hover,
+.projects:hover,
+.resume:hover {
+    transform: scale(1.4);
+    /* Slightly larger scale on hover */
+}
+
+
+.links:hover .overlay-text,
+.caseStudies:hover .overlay-text,
+.projects:hover .overlay-text,
+.resume:hover .overlay-text {
+    transform: scale(1.2);
+    /* Scale the text up to full size */
+    opacity: 1;
+    /* Fully opaque to make text readable */
+}
+
+
+/* CASE STUDIES */
+.myCaseStudies {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.caseStudy3,
+.caseStudy1,
+.caseStudy2,
+.caseStudy4 {
+    display: flex;
+    flex-direction: row;
+    border-radius: 2rem;
+    width: 58rem;
+    height: 25rem;
+    justify-content: space-around;
+}
+
+.cs-content {
+    display: flex;
+    flex-direction: column;
+    width: 50rem;
+    background-color: #fffffe;
+    border-radius: 2rem;
+    margin: 1.5rem;
+    margin-left: 8rem;
+
+}
+
+.cs-content p {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+
+.cs-content h2 {
+    padding: 1.5rem;
+}
+
+.project-skills {
+    padding: 3rem;
+}
+
+.cs-pic {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+}
+
+.cs-pic img {
+    max-width: 110%;
+
+    object-fit: contain;
+    width:500px;
+    height: auto;
+}
+
+button {
+    padding: 0.7rem;
+    width: 200px;
+    border: none;
+    box-shadow: 8.0px 16.0px 16.0px hsl(0deg 0% 0% / 0.25);
+}
+
+.project-skills {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: #f0e7de;
+    background-color: linear-gradient(90deg, #1e293b, transparent 30%, transparent 70%, #1e293b);
+    margin-left: 1rem;
+    margin-right: 1rem;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 8.0px 16.0px 16.0px hsl(0deg 0% 0% / 0.25);
+    justify-content: center;
+}
+
+.pro-skill {
+    margin-right: 0.5rem;
+    margin-top: 0.5rem;
+    background-color: #000000;
+    padding: 0.6rem;
+    border-radius: 13px;
+    color: white;
+    box-shadow: 8.0px 16.0px 16.0px hsl(0deg 0% 0% / 0.25);
+}
+
+.view {
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+}
+
+.mybuttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+
+/*-------------------------TAGS ANIMATION--------------------------- */
+.tag-list {
+    width: 100%;
+    display: flex;
+    flex-shrink: 0;
+    flex-direction: column;
+    gap: 1rem 0;
+    position: relative;
+    padding: 1.5rem 0;
+    overflow: hidden;
+}
+
+.loop-slider {
+    .inner {
+        display: flex;
+        width: fit-content;
+        position: relative;
+        animation-name: loop;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-duration: 20s;
+    }
+}
+
+
+
+.tag {
+    display: flex;
+    align-items: center;
+    gap: 0 0.2rem;
+    color: #0f0e17;
+    font-size: 0.9rem;
+    background-color: #7e7b7d96;
+    border-radius: 0.4rem;
+    padding: 0.7rem;
+    margin-right: 1rem;
+    box-shadow:
+        0 0.1rem 0.2rem rgb(0 0 0 / 20%),
+        0 0.1rem 0.5rem rgb(0 0 0 / 30%),
+        0 0.2rem 1.5rem rgb(0 0 0 / 40%);
+
+    span {
+        font-size: 1.2rem;
+        color: #e53170;
+    }
+}
+
+.fade {
+    pointer-events: none;
+    background: linear-gradient(90deg, #1e293b, transparent 30%, transparent 70%, #1e293b);
+    position: absolute;
+    inset: 0;
+}
+
+@keyframes loop {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+/*--------------------------------PROJECTS GALLERY -----------------------------------*/
+.projectGallery{
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+}
+.result{
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+ul {
+    display: flex;
+    justify-content: center;
+    width: calc(80% - 2rem);
+    padding: 0;
+    margin: 300px;
+    list-style-type: none;
+}
+
+li {
+    padding:0;
+}
+
+.result img {
+    max-width: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: all 0.2s ease;
+}
+
+ul:is(:hover, :focus-within) img {
+    opacity: calc(0.1 + (var(--active-lerp, 0) * 0.9));
+    filter: grayscale(calc(1 - var(--active-lerp, 0)));
+}
+
+
+
+a {
+    outline-offset: 4px;
+}
+
+li {
+    flex: calc(0.1 + (var(--active-lerp, 0) * 1));
+    transition: flex 0.2s ease;
+}
+
+li:is(:hover, :focus-within) {
+    --active-lerp: var(--lerp-0);
+    z-index: 7;
+}
+
+li:has(+ li:is(:hover, :focus-within)),
+li:is(:hover, :focus-within)+li {
+    --active-lerp: var(--lerp-1);
+    z-index: 6;
+}
+
+li:has(+ li + li:is(:hover, :focus-within)),
+li:is(:hover, :focus-within)+li+li {
+    --active-lerp: var(--lerp-2);
+    z-index: 5;
+}
+
+li:has(+ li + li + li:is(:hover, :focus-within)),
+li:is(:hover, :focus-within)+li+li+li {
+    --active-lerp: var(--lerp-3);
+    z-index: 4;
+}
+
+li:has(+ li + li + li + li:is(:hover, :focus-within)),
+li:is(:hover, :focus-within)+li+li+li+li {
+    --active-lerp: var(--lerp-4);
+    z-index: 3;
+}
+
+li:has(+ li + li + li + li + li:is(:hover, :focus-within)),
+li:is(:hover, :focus-within)+li+li+li+li+li {
+    --active-lerp: var(--lerp-5);
+    z-index: 2;
+}
+
+li:has(+ li + li + li + li + li + li:is(:hover, :focus-within)),
+li:is(:hover, :focus-within)+li+li+li+li+li+li {
+    --active-lerp: var(--lerp-6);
+    z-index: 1;
+}
+
+
+
+.result a {
+    position: relative;
+    display: block;
+}
+
+.hover-text {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    color: #fff;
+    text-align: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease, visibility 0.5s;
+}
+
+.result a:hover .hover-text {
+    visibility: visible;
+    opacity: 1;
+}

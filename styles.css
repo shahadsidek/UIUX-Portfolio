@@ -1,0 +1,161 @@
+*,
+body {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    background-color: rgb(0, 0, 0);
+}
+
+.hero {
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-start;
+    height: 50vh;
+    background-image: url("./images/Potal\ Tech\ Co..png");
+    background-size: cover;
+
+}
+
+.logo {
+    display: flex;
+}
+
+.logo img {
+    width: 170px;
+    height: 170px;
+    max-height: 170px;
+    max-width: 170px;
+    /*border: 4px rgb(0, 179, 255) solid;*/
+    margin-top: 1em;
+    margin-left: 2.3rem;
+}
+
+.navigation {
+    margin-top: 3rem;
+    margin-left: 4rem;
+}
+
+.navigation a {
+    /*border: 1px solid green;*/
+    display: block;
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+    margin: 0.7rem 0.3rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 28px;
+    border-radius: 60px;
+    transition: background-color 1s ease, transform 1s ease;
+}
+
+.navigation a:hover,
+.navigation a:focus {
+    background-color: rgb(172, 14, 119);
+    transform: scale(1.2);
+    color: #fff;
+    border: 3px solid rgb(76, 6, 99);
+}
+
+
+.skills {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.uiuxskills {
+    margin: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #FF64C7;
+    border-radius: 30px;
+    transition: background-color 1s ease, transform 1s ease;
+}
+
+.devskills {
+    margin: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #F4AA08;
+    border-radius: 30px;
+    transition: background-color 1s ease, transform 1s ease;
+}
+
+.databases {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: #812DCE;
+    border-radius: 30px;
+    transition: background-color 1s ease, transform 1s ease;
+}
+
+.skill1,
+.skill2,
+.skill3 {
+    padding: 7px;
+    background-color: black;
+    color: #807e7f;
+    margin: 7px;
+    text-align: center;
+    border-radius: 25px;
+}
+
+.skilltitle {
+    display: block;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    color: white;
+    text-align: center;
+    margin-bottom: 8px;
+    margin-top: 8px;
+    border-bottom: 1px solid white;
+}
+
+/*
+
+.hero {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.navigation {
+    position: absolute;
+    left: 7rem;
+    top: 11rem;
+
+}
+
+.logo img {
+    width: 160px;
+    position: absolute;
+    left: 0;
+}
+
+
+.navigation a {
+    border: 1px solid rgb(255, 0, 170);
+    display: block;
+    padding: 20px 20px;
+    text-decoration: none;
+    font-size: 1.7rem;
+    color: #fff;
+    margin: 20px;
+    border-radius: 35px;
+   
+
+
+}
+
+*/

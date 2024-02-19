@@ -49,6 +49,7 @@ body {
     max-width: 400px;
 }
 
+
 .right {
     width: 70%;
     height: auto;
@@ -63,6 +64,7 @@ body {
     flex-direction: row;
     justify-content: space-around;
 }
+
 
 /*BUTTON*/
 .links {
@@ -231,7 +233,7 @@ body {
     max-width: 110%;
 
     object-fit: contain;
-    width:500px;
+    width: 500px;
     height: auto;
 }
 
@@ -346,17 +348,19 @@ button {
 }
 
 /*--------------------------------PROJECTS GALLERY -----------------------------------*/
-.projectGallery{
+.projectGallery {
     display: grid;
     place-items: center;
     min-height: 100vh;
 }
-.result{
+
+.result {
     position: relative;
     cursor: pointer;
     overflow: hidden;
     transition: transform 0.3s ease;
 }
+
 ul {
     display: flex;
     justify-content: center;
@@ -367,7 +371,7 @@ ul {
 }
 
 li {
-    padding:0;
+    padding: 0;
 }
 
 .result img {
@@ -446,7 +450,8 @@ li:is(:hover, :focus-within)+li+li+li+li+li+li {
     width: 100%;
     bottom: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent background */
     color: #fff;
     text-align: center;
     visibility: hidden;
@@ -457,4 +462,80 @@ li:is(:hover, :focus-within)+li+li+li+li+li+li {
 .result a:hover .hover-text {
     visibility: visible;
     opacity: 1;
+}
+
+
+
+/* CONTACT SECTION */
+.contact-section {
+    background-color: #7e7b7d96;
+    color: white;
+    padding: 20px;
+    margin: 30px auto;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: row;
+}
+
+.left-side {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+
+.heading-contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    margin-bottom: 20px;
+}
+.heading-contact h2{
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.right-side {
+    width: 60%;
+}
+
+
+.contact-section p {
+    color: #fff;
+}
+
+.contact-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+    background-color: white;
+    border-radius: 13px;
+}
+
+
+
+input{
+    width: 49%;
+    margin-bottom: 10px;
+    padding: 8px;
+    border: none;
+    border-bottom: 1px solid rgb(212, 208, 208);
+    margin-top: 5px;
+}
+
+textarea{
+    width: 99%;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    border: none;
+    border-bottom: 1px solid rgb(212, 208, 208);
+}
+
+.btn{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width:99%;
+    border-radius: 13px;
+    background-color: #0f0e17;
+    color: white;
 }

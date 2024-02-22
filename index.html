@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    
     <title>UI UX portfolio</title>
 </head>
 
@@ -32,18 +31,22 @@
                     </p>
                 </div>
                 <div class="crazybuttons">
-                    <div class="links">
-                        <div class="overlay-text">Links</div>
-                    </div>
-                    <div class="caseStudies">
-                        <div class="overlay-text">Case Studies</div>
-                    </div>
-                    <div class="projects">
-                        <div class="overlay-text">Projects</div>
-                    </div>
-                    <div class="resume">
-                        <div class="overlay-text">My Resume</div>
-                    </div>
+                    <a href="#myCaseStudiesBK"></a>
+                        <div class="caseStudies">
+                            <div class="overlay-text">Case Studies</div>
+                        </div>
+                    </a>
+
+                    <a href="#myProjects">
+                        <div class="projects">
+                            <div class="overlay-text">Projects</div>
+                        </div>
+                    </a>
+                    <a href="./resume/Shahad-UIUX-WebDeveloper.pdf" download="Shahad-UIUX-WebDeveloper.pdf">
+                        <div class="resume">
+                            <div class="overlay-text">My Resume</div>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -72,7 +75,8 @@
             </div>
         </div>
 
-        <div class="myCaseStudies">
+        <div class="myCaseStudies" id="myCaseStudiesBK">
+            <h1 class="section-titles">CASE STUDIES</h1>
             <div class="caseStudy1">
                 <div class="cs-pic">
                     <img src="./images/uip1-2.png" alt="" class="src">
@@ -148,7 +152,7 @@
             </div>
             <div class="caseStudy4">
                 <div class="cs-pic">
-                    <img src="./images/uip3-2.png" alt="" class="src" width="370px">
+                    <img src="./images/CS4.png" alt="" class="src" width="370px">
                 </div>
                 <div class="cs-content">
                     <div class="content">
@@ -180,8 +184,8 @@
             </div>
         </div>
 
-        <div class="projectGallery">
-            <h2>My Projects</h2>
+        <div class="projectGallery" id="myProjects">
+            <h1>MY PROJECTS</h1>
             <ul class="results">
                 <li class="result">
                     <a href="https://shahadsidek.github.io/Resume-Builder"><img
@@ -271,7 +275,7 @@
         <div class="contact-section">
             <div class="left-side">
                 <div class="heading-contact">
-                    <h2>Contact Information</h2>
+                    <h1>Lets get in Touch</h1>
                     <p>Fill up the form and our Team will get back to you within 24 hours.</p>
                 </div>
                 <div class="details-contact">
@@ -280,29 +284,31 @@
                     <span class="span-edit">Doha- Qatar</span><br>
                 </div>
                 <div class="socialMedia">
-                    <img src="./images/linkedin.png" width="30px">
-                    <img src="./images/github.png" width="30px">
-                    <img src="./images/behance.png" width="30px">
-                    <img src="./images/twitter.png" width="30px">
-                    <img src="./images/world-wide-web.png" width="30px">
-                    <img src="./images/dribbble.png" width="30px">
+                    <a href="https://www.linkedin.com/in/shahads/"><img src="./images/linkedin.png" width="30px"></a>
+                    <a href="https://github.com/shahadsidek"><img src="./images/github.png" width="30px"></a>
+                    <a href="https://www.behance.net/myportfolio-shahads/projects"><img src="./images/behance.png" width="30px"></a>
+                    <a href="https://twitter.com/techie_learner"><img src="./images/twitter.png" width="30px"></a>
+                    <a href="https://shahadsidek.github.io/my-portfolio/"><img src="./images/world-wide-web.png" width="30px"></a>
+                    <a href="https://dribbble.com/shahad-sidek"><img src="./images/dribbble.png" width="30px"></a>
                 </div>
 
             </div>
             <div class="right-side">
                 <form class="contact-form">
-                    <input type="text" placeholder="First Name">
-                    <input type="text" placeholder="Last Name">
-                    <input type="email" placeholder="Email">
-                    <input type="tel" placeholder="Phone">
-                    <textarea placeholder="Message"></textarea>
-                    <button type="submit" class="btn">Send Message</button>
+                    <div class="form-controls">
+                        <input type="text" placeholder="First Name">
+                        <input type="text" placeholder="Last Name">
+                        <input type="email" placeholder="Email">
+                        <input type="tel" placeholder="Phone">
+                        <textarea placeholder="Message"></textarea>
+                        <button type="submit" class="btn">Send Message</button>
+                    </div>
                 </form>
             </div>
 
         </div>
-        <footer>
-
+        <footer class="footer">
+            <p>copyright Shahad @ 2024</p>
         </footer>
     </div>
 </body>

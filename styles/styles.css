@@ -126,13 +126,9 @@ body {
 .projects,
 .resume {
     position: relative;
-    /* Needed for absolute positioning of the text */
     cursor: pointer;
-    /* Optional: Changes the cursor on hover */
     overflow: hidden;
-    /* Ensures the scale transform doesn't exceed the div boundaries */
     transition: transform 0.3s ease;
-    /* Smooth transition for the scaling */
 }
 
 .overlay-text {
@@ -148,11 +144,8 @@ body {
     transform: scale(0);
     transition: transform 0.3s ease;
     background: rgba(0, 0, 0, 0.5);
-    /* Semi-transparent overlay */
     opacity: 0;
-    /* Start fully transparent */
     pointer-events: none;
-    /* Allows clicking through to the div below */
 }
 
 /* Hover effects */
@@ -161,7 +154,6 @@ body {
 .projects:hover,
 .resume:hover {
     transform: scale(1.4);
-    /* Slightly larger scale on hover */
 }
 
 
@@ -170,9 +162,7 @@ body {
 .projects:hover .overlay-text,
 .resume:hover .overlay-text {
     transform: scale(1.2);
-    /* Scale the text up to full size */
     opacity: 1;
-    /* Fully opaque to make text readable */
 }
 
 
@@ -184,6 +174,11 @@ body {
     justify-content: center;
 }
 
+.myCaseStudies h1 {
+    width: 100%;
+    text-align: center;
+}
+
 .caseStudy3,
 .caseStudy1,
 .caseStudy2,
@@ -192,7 +187,6 @@ body {
     flex-direction: row;
     border-radius: 2rem;
     width: 58rem;
-    height: 25rem;
     justify-content: space-around;
 }
 
@@ -204,7 +198,6 @@ body {
     border-radius: 2rem;
     margin: 1.5rem;
     margin-left: 8rem;
-
 }
 
 .cs-content p {
@@ -226,12 +219,10 @@ body {
     display: flex;
     justify-content: center;
     align-content: center;
-
 }
 
 .cs-pic img {
     max-width: 110%;
-
     object-fit: contain;
     width: 500px;
     height: auto;
@@ -351,7 +342,7 @@ button {
 .projectGallery {
     display: grid;
     place-items: center;
-    min-height: 100vh;
+    min-height: 60vh;
 }
 
 .result {
@@ -366,7 +357,7 @@ ul {
     justify-content: center;
     width: calc(80% - 2rem);
     padding: 0;
-    margin: 300px;
+    margin: 3rem;
     list-style-type: none;
 }
 
@@ -471,11 +462,11 @@ li:is(:hover, :focus-within)+li+li+li+li+li+li {
     background-color: #7e7b7d96;
     color: white;
     padding: 20px;
-    margin: 30px auto;
     border-radius: 8px;
     display: flex;
     flex-direction: row;
 }
+
 
 .left-side {
     width: 40%;
@@ -490,7 +481,8 @@ li:is(:hover, :focus-within)+li+li+li+li+li+li {
     text-align: left;
     margin-bottom: 20px;
 }
-.heading-contact h2{
+
+.heading-contact h1 {
     margin-bottom: 20px;
     color: #fff;
 }
@@ -499,7 +491,6 @@ li:is(:hover, :focus-within)+li+li+li+li+li+li {
     width: 60%;
 }
 
-
 .contact-section p {
     color: #fff;
 }
@@ -507,14 +498,14 @@ li:is(:hover, :focus-within)+li+li+li+li+li+li {
 .contact-form {
     display: flex;
     flex-wrap: wrap;
-    justify-content:space-evenly;
+    justify-content: space-evenly;
     background-color: white;
     border-radius: 13px;
 }
 
 
 
-input{
+input {
     width: 49%;
     margin-bottom: 10px;
     padding: 8px;
@@ -523,7 +514,7 @@ input{
     margin-top: 5px;
 }
 
-textarea{
+textarea {
     width: 99%;
     margin-bottom: 10px;
     margin-top: 5px;
@@ -531,11 +522,48 @@ textarea{
     border-bottom: 1px solid rgb(212, 208, 208);
 }
 
-.btn{
+.btn {
     margin-top: 20px;
     margin-bottom: 20px;
-    width:99%;
+    width: 99%;
     border-radius: 13px;
     background-color: #0f0e17;
     color: white;
+}
+
+
+.form-controls {
+    padding: 20px;
+}
+
+.footer {
+    background-color: #000000;
+    height: 5vh;
+    color: white;
+}
+
+.socialMedia {
+    margin-top: 3rem;
+    width: 13rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 18rem;
+    min-width: 13rem;
+}
+
+
+/* Style for devices with less than 600px width */
+@media (max-width: 599px) {
+    /* Adjust styles for small screens */
+}
+
+/* Style for devices with width between 600px and 1200px */
+@media (min-width: 600px) and (max-width: 1199px) {
+    /* Adjust styles for medium screens */
+}
+
+/* Style for devices with more than 1200px width */
+@media (min-width: 1200px) {
+    /* Adjust styles for large screens */
 }

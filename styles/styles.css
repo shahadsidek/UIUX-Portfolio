@@ -1,8 +1,9 @@
 * {
     box-sizing: border-box;
     margin: 0;
-    padding: 0
+    padding: 0;
 }
+
 
 :root {
     --lerp-0: 1;
@@ -62,20 +63,12 @@ body {
 .crazybuttons {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
 }
 
 
-/*BUTTON*/
-.links {
-    background-image: url('../images/heroSection-pic1.png');
-    background-size: cover;
-    background-position: center;
-    height: 7rem;
-    width: 7rem;
-    border-radius: 50%;
-    margin-bottom: 1.5rem;
-}
 
 /*BUTTON*/
 .caseStudies {
@@ -121,7 +114,6 @@ body {
 }
 
 
-.links,
 .caseStudies,
 .projects,
 .resume {
@@ -149,7 +141,6 @@ body {
 }
 
 /* Hover effects */
-.links:hover,
 .caseStudies:hover,
 .projects:hover,
 .resume:hover {
@@ -157,7 +148,6 @@ body {
 }
 
 
-.links:hover .overlay-text,
 .caseStudies:hover .overlay-text,
 .projects:hover .overlay-text,
 .resume:hover .overlay-text {
@@ -166,7 +156,7 @@ body {
 }
 
 
-/* CASE STUDIES */
+/* -------------------------CASE STUDIES-------------------- */
 .myCaseStudies {
     display: flex;
     flex-direction: row;
@@ -379,7 +369,7 @@ ul:is(:hover, :focus-within) img {
 
 
 
-a {
+.results a {
     outline-offset: 4px;
 }
 
@@ -555,15 +545,181 @@ textarea {
 
 /* Style for devices with less than 600px width */
 @media (max-width: 599px) {
-    /* Adjust styles for small screens */
+    .containter {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .hero {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .left img {
+        width: 200px;
+        max-width: 400px;
+    }
+
+    .crazybuttons {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+    }
+
+    .myCaseStudies {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .caseStudy3,
+    .caseStudy1,
+    .caseStudy2,
+    .caseStudy4 {
+        background-color: #020202;
+        display: flex;
+        flex-direction: column;
+        width: 30rem;
+        justify-content: center;
+        align-items: center;
+        margin-top: 5rem;
+        padding: 2rem;
+    }
+
+    .cs-content {
+        display: flex;
+        flex-direction: column;
+        width: 97%;
+        background-color: #fffffe;
+        border-radius: 2rem;
+        margin: 1rem;
+        padding:1rem;
+    }
+
+    .cs-pic {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .cs-pic img {
+        max-width: 110%;
+        object-fit: contain;
+        width: 70%;
+        height: auto;
+    }
 }
 
 /* Style for devices with width between 600px and 1200px */
 @media (min-width: 600px) and (max-width: 1199px) {
-    /* Adjust styles for medium screens */
+    .containter {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .hero {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .left img {
+        width: 230px;
+        max-width: 400px;
+    }
+
+    .crazybuttons {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .myCaseStudies {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 1rem;
+
+    }
+
+    .caseStudy3,
+    .caseStudy1,
+    .caseStudy2,
+    .caseStudy4 {
+        background-color: #020202;
+        display: flex;
+        flex-direction: column;
+        width: 40rem;
+        justify-content: center;
+        align-items: center;
+        margin-top: 5rem;
+        padding: 2rem;
+    }
+
+    .cs-content {
+        display: flex;
+        flex-direction: column;
+        width: 97%;
+        background-color: #fffffe;
+        border-radius: 2rem;
+        margin: 1rem;
+        padding:1rem;
+    }
+
+    .cs-pic {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .cs-pic img {
+        max-width: 110%;
+        object-fit: contain;
+        width: 90%;
+        height: auto;
+    }
 }
 
 /* Style for devices with more than 1200px width */
 @media (min-width: 1200px) {
-    /* Adjust styles for large screens */
+    .containter {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hero {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .crazybuttons {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
 }
